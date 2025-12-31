@@ -1,0 +1,11 @@
+[2025-12-31 12:33:55] Starting startup fix script
+[2025-12-31 12:33:55] Script dir: C:\Users\swade_t\OneDrive\Desktop\jarvis_web
+[2025-12-31 12:33:55] Startup folder: C:\Users\swade_t\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+[2025-12-31 12:33:55] Desired target: C:\Users\swade_t\OneDrive\Desktop\jarvis_web\launch_jarvis_silent.bat
+[2025-12-31 12:33:55] Backed up existing shortcut to C:\Users\swade_t\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Jarvis.lnk.bak
+[2025-12-31 12:33:55] Created/updated shortcut: C:\Users\swade_t\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Jarvis.lnk -> C:\Users\swade_t\OneDrive\Desktop\jarvis_web\launch_jarvis_silent.bat
+[2025-12-31 12:33:55] Moved stray startup file C:\Users\swade_t\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\launch_jarvis.bat -> C:\Users\swade_t\OneDrive\Desktop\jarvis_web\startup_backups\launch_jarvis.bat
+[2025-12-31 12:33:55] Moved stray startup file C:\Users\swade_t\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\main.exe.py -> C:\Users\swade_t\OneDrive\Desktop\jarvis_web\startup_backups\main.exe.py
+[2025-12-31 12:33:55] Moved stray startup file C:\Users\swade_t\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\main.pyw.py -> C:\Users\swade_t\OneDrive\Desktop\jarvis_web\startup_backups\main.pyw.py
+[2025-12-31 12:33:55] Started launcher for testing: C:\Users\swade_t\OneDrive\Desktop\jarvis_web\launch_jarvis_silent.bat
+[2025-12-31 12:33:55] Startup fix script completed

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis — Functions</title>
+    <style>
+        :root{
+            --bg: linear-gradient(180deg,#071029,#0b1223);
+            --card:#07182a;
+            --accent:linear-gradient(90deg,#6ee7b7,#7c3aed);
+            --muted:rgba(230,238,248,0.75);
+            --glass: rgba(255,255,255,0.03);
+        }
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Segoe UI,Roboto,Arial;background:var(--bg);color:#e6eef8;min-height:100vh;padding:36px}
+        .wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:28px}
+        .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));padding:28px;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+        h1{margin:0 0 8px;font-size:26px;background:-webkit-linear-gradient(#6ee7b7,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        p.lead{color:var(--muted);margin-bottom:18px}
+        .section{margin-bottom:18px}
+        .section h3{margin:0 0 8px;font-size:16px;color:#dff5ee}
+        .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        .item{background:var(--glass);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+        .item b{display:block;margin-bottom:6px;color:#eafaf0}
+        .sidebar .panel{padding:18px;text-align:center}
+        .micro{width:86px;height:86px;border-radius:999px;margin:10px auto;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#022; font-weight:800;box-shadow:0 12px 30px rgba(7,12,34,0.6)}
+        .muted{color:var(--muted);font-size:14px}
+        @media(max-width:980px){.wrap{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.sidebar{order:-1}}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <h1>Jarvis — Functions</h1>
+            <p class="lead">Quick reference to the voice commands Jarvis understands. Say the bold command word or phrase to trigger the action.</p>
+
+            <div class="section">
+                <h3>Web & App Commands</h3>
+                <div class="grid">
+                    <div class="item"><b>Open &lt;site&gt;</b><span class="muted">Opens the website (e.g. "Open Google")</span></div>
+                    <div class="item"><b>Open Chat GPT</b><span class="muted">Opens ChatGPT in your browser</span></div>
+                    <div class="item"><b>Open WhatsApp</b><span class="muted">Launches WhatsApp Desktop</span></div>
+                    <div class="item"><b>Open Paint</b><span class="muted">Launches Microsoft Paint</span></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Browser & Navigation</h3>
+                <div class="grid">
+                    <div class="item"><b>New tab</b><span class="muted">Ctrl+T</span></div>
+                    <div class="item"><b>Next tab</b><span class="muted">Ctrl+Tab</span></div>
+                    <div class="item"><b>Previous tab</b><span class="muted">Ctrl+Shift+Tab</span></div>
+                    <div class="item"><b>Exit tab</b><span class="muted">Closes current tab</span></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>System & Controls</h3>
+                <div class="grid">
+                    <div class="item"><b>Former app</b><span class="muted">Switch to last app</span></div>
+                    <div class="item"><b>Close it</b><span class="muted">Alt+F4</span></div>
+                    <div class="item"><b>Open Windows</b><span class="muted">Opens Start menu</span></div>
+                    <div class="item"><b>Search</b><span class="muted">Activates search mode then say query</span></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Power & Exit</h3>
+                <div class="grid">
+                    <div class="item"><b>Shutdown</b><span class="muted">Shuts down PC in 5s</span></div>
+                    <div class="item"><b>Sleep</b><span class="muted">Stops Jarvis</span></div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="card panel">
+                <div class="micro">🎙️</div>
+                <h3>Ready to Listen</h3>
+                <p class="muted">Say <strong>"Jarvis"</strong> to activate. The background service needs to be running.</p>
+                <p class="muted" style="margin-top:12px;font-size:13px">Try: <em>"Jarvis, open YouTube"</em></p>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

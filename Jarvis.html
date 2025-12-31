@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jarvis — Your Personal AI Assistant</title>
+    <style>
+        :root{
+            --bg1: #0f172a; /* dark navy */
+            --bg2: #0b1223; /* deeper */
+            --accent1: #6ee7b7; /* mint */
+            --accent2: #7c3aed; /* purple */
+            --card: rgba(255,255,255,0.04);
+            --glass: rgba(255,255,255,0.04);
+            --text: #e6eef8;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent),
+                        linear-gradient(180deg,var(--bg1), var(--bg2));
+            color:var(--text);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:40px;
+        }
+        .card{
+            width:min(1000px, 96%);
+            background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+            border-radius:18px;
+            padding:36px;
+            box-shadow: 0 8px 40px rgba(2,6,23,0.6);
+            display:grid;
+            grid-template-columns: 1fr 360px;
+            gap:28px;
+            align-items:center;
+        }
+        .hero{
+            padding:8px 12px;
+        }
+        .title{
+            font-size:28px;
+            font-weight:700;
+            margin-bottom:8px;
+            background:linear-gradient(90deg,var(--accent1),var(--accent2));
+            -webkit-background-clip:text;
+            background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+        .lead{color:rgba(230,238,248,0.85); margin-bottom:18px; font-size:16px}
+        .controls{display:flex; flex-wrap:wrap; gap:12px}
+        .btn{
+            background:transparent;
+            border:1px solid rgba(255,255,255,0.08);
+            color:var(--text);
+            padding:10px 14px;
+            border-radius:10px;
+            cursor:pointer;
+            font-weight:600;
+            transition:all .18s ease;
+            backdrop-filter:blur(6px);
+        }
+        .btn.primary{
+            background:linear-gradient(90deg,var(--accent1),var(--accent2));
+            border: none;
+            color:#051025;
+            box-shadow: 0 8px 24px rgba(124,58,237,0.18);
+        }
+        .btn:hover{transform:translateY(-4px)}
+        .panel{
+            background:var(--glass);
+            border-radius:12px;
+            padding:18px;
+            color:rgba(230,238,248,0.95);
+            text-align:center;
+        }
+        .panel h4{margin:0 0 8px 0; font-size:18px}
+        .listen-note{font-size:14px; color:rgba(230,238,248,0.8)}
+        .micro{
+            width:88px;height:88px;border-radius:999px;background:linear-gradient(180deg,var(--accent2),var(--accent1));
+            display:flex;align-items:center;justify-content:center;margin:12px auto;font-size:34px;color:#04202a;font-weight:800;box-shadow:0 12px 30px rgba(7,12,34,0.6)
+        }
+        @media(max-width:880px){
+            .card{grid-template-columns:1fr;}
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="hero">
+            <div class="title">Jarvis — Your Personal AI Assistant</div>
+            <div class="lead">Voice-activated, always-on assistant that helps you control apps, search the web, and automate common tasks.</div>
+
+            <div class="controls">
+                <button class="btn" onclick="location.href='/functions'">View Functions</button>
+                <button class="btn" onclick="location.href='/about'">About</button>
+                <button class="btn" onclick="location.href='/subscription'">Subscribe</button>
+                <button class="btn primary" onclick="speakExample()">Try: "Jarvis, what's the time?"</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="micro">🎙️</div>
+            <h4>Ready to Listen</h4>
+            <div class="listen-note">Say <strong>"Jarvis"</strong> to activate your bot.<br>Works in background when running.</div>
+        </div>
+    </div>
+
+    <script>
+        function speakExample(){
+            fetch('/jarvis') // optional ping; keeps simple
+            try{ new SpeechSynthesisUtterance && window.speechSynthesis.speak(new SpeechSynthesisUtterance("Say Jarvis to activate your bot")) }catch(e){}
+        }
+    </script>
+</body>
+</html>
+
